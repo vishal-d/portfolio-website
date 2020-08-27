@@ -1,0 +1,77 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Vishal D</title>
+
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--<div id="particles-js"></div>
+<script type="text/javascript" src="particles1.js"></script>
+<script type="text/javascript" src="app1.js"></script>
+-->
+<!--<script src="./sketch.min.js"></script>
+<script src="./animation.js"></script>-->
+  <div class="wrapper">
+	  <div data-text></div>
+	  <span class="item">Web Developer</span>
+	  <span class="item">Traveller</span>
+	  <span class="item">Programmer</span>
+	  <span class="item">Guitarist</span>
+	  <h2>Hey, I'm Vishal</h2>
+  </div>
+  <script  src="./script.js"></script>
+
+</body>
+
+<template name="layout">
+	{{> header}}
+	{{> yield}}
+</template>
+
+<template name="header">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Portfolio</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="news">News</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/admin/blog">Admin Area (must login)</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="home">
+  <div class="container">
+      Welcome to our portfolio website.
+  </div>
+</template>
+
+<template name="blog">
+  <div class="container">
+    {{> blogIndex}}
+  </div>
+</template>
+
+
+<template name="news">
+  <div class="container">
+      This is an example of a static news page. You can put lots of static content
+  </div>
+</template>
